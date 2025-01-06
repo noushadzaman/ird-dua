@@ -2,6 +2,7 @@ import getDb from "@/sqlite";
 import "@/app/globals.css";
 import Cats from "@/components/Cats";
 import DuaContainer from "@/components/DuaContainer";
+import Sidebar from "@/components/Sidebar";
 
 export default function Post({
   cats,
@@ -18,15 +19,31 @@ export default function Post({
   console.log(duas);
 
   return (
-    <div className="flex gap-[33px] items-start h-[100vh] overflow-y-clip">
-      <Cats
-        cats={cats}
-        subcats={subcats}
-        duasName={duasName}
-        querycat={querycat}
-        querySubcat={querySubcat}
-      />
-      <DuaContainer subcats={subcats} duas={duas} />
+    <div className="flex gap-[33px] h-[100vh] overflow-y-hidden">
+      {/* left sidebar*/}
+      <Sidebar />
+      {/* middle part */}
+      <div className="flex flex-col">
+        <nav className="flex justify-between my-[28px]">
+          <h1 className="text-[24px] font-[600]">Dua Page</h1>
+          <div className="flex items-center gap-[50px]">
+            <input className="" type="text" />
+            <div>{`:)`}</div>
+          </div>
+        </nav>
+
+        <div className="flex gap-[33px]">
+          <Cats
+            cats={cats}
+            subcats={subcats}
+            duasName={duasName}
+            querycat={querycat}
+            querySubcat={querySubcat}
+          />
+          <DuaContainer subcats={subcats} duas={duas} />
+        </div>
+      </div>
+      {/* right sidebar*/}
     </div>
   );
 }

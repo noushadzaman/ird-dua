@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "3xl-up": "0 -35px 60px -15px rgba(0, 0, 0, 0.2)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

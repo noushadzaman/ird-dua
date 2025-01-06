@@ -5,9 +5,20 @@ import PRAY_TIME from "@/public/icon/pray-hand.png";
 import DAY_NIGHT from "@/public/icon/day-night-ico.png";
 import SLEEP from "@/public/icon/sleep-ico.png";
 import CLOTH from "@/public/icon/cloth.png";
-import HOME from "@/public/icon/home.png";
+import HOME_ICON from "@/public/icon/home.png";
 import TOILET from "@/public/icon/toilet.png";
 import AZAN from "@/public/icon/azan.png";
+import BOOK from "@/public/sidebar/book.png";
+import BULB from "@/public/sidebar/bulb.png";
+import CHAT from "@/public/sidebar/chat.png";
+import HOME from "@/public/sidebar/home.png";
+import MARK from "@/public/sidebar/mark.png";
+import MENU from "@/public/sidebar/menu.png";
+import RUQYAH from "@/public/sidebar/ruqyah.png";
+import LOGO from "@/public/sidebar/logo.png";
+import LOGO2 from "@/public/sidebar/logo-2.png";
+
+export { BOOK, BULB, CHAT, HOME, MARK, MENU, RUQYAH, LOGO, LOGO2 };
 
 export const findCatLogo = (icon) => {
   switch (icon) {
@@ -26,7 +37,7 @@ export const findCatLogo = (icon) => {
     case "ghum":
       return SLEEP;
     case "bari":
-      return HOME;
+      return HOME_ICON;
     case "toilet":
       return TOILET;
     case "azan_ikamot":

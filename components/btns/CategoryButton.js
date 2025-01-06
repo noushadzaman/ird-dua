@@ -12,7 +12,7 @@ const CategoryButton = ({ cat, subcats }) => {
       }`}
     >
       {" "}
-      <div className="bg-[#E8F0F5] flex p-[10px] items-center gap-[16px] border-b border-[#F9F9F9] rounded-[10px]">
+      <div className="hover:bg-[#E8F0F5] flex p-[10px] items-center gap-[16px] border-b border-[#F9F9F9] rounded-[10px]">
         <div className="size-[60px] bg-[#CFE0E5] flex items-center justify-center rounded-[10px]">
           <Image
             width={40}

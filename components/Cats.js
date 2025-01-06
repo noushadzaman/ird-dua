@@ -3,7 +3,7 @@ import SubCats from "./SubCats";
 
 const Cats = ({ cats, subcats, duasName, querycat, querySubcat }) => {
   return (
-    <div className="md:w-[429px] rounded-[10px] bg-[white] h-auto">
+    <div className="md:w-[400px] rounded-[10px] bg-[white] max-h-[85vh]">
       <h3 className="bg-[#1FA45B] text-center py-[18px] font-[600] text-[17px] text-white rounded-t-[10px]">
         Categories
       </h3>

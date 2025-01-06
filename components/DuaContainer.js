@@ -25,17 +25,21 @@ const DuaContainer = ({ subcats, duas }) => {
   console.log(duaStructure);
 
   return (
-    <div className="flex flex-col gap-[10px] flex-1 h-full overflow-y-scroll">
+    <div className="flex flex-col gap-[10px] flex-1 h-[90vh] overflow-y-scroll ">
       {duaStructure.map((item, number) => {
         return typeof item === "string" ? (
-          <p
+          <div
             style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
-            className="px-[30px] py-[15px] bg-white rounded-[10px] font-[500] text-[#393939]"
-            key={number}
+            className="rounded-[10px] bg-white font-[500] text-[#393939]"
           >
-            <span className="text-[#1FA45B] font-[600]">Section: </span>
-            {item}
-          </p>
+            <p
+              className="px-[30px] py-[15px] rounded-[10px]"
+              key={number}
+            >
+              <span className="text-[#1FA45B] font-[600]">Section: </span>
+              {item}
+            </p>
+          </div>
         ) : (
           <Fragment key={number}>
             {item.map((dua, i) => (
