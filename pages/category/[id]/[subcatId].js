@@ -18,7 +18,7 @@ export default function Post({
   console.log(duas);
 
   return (
-    <div className="flex">
+    <div className="flex gap-[33px] items-start h-[100vh] overflow-y-clip">
       <Cats
         cats={cats}
         subcats={subcats}
