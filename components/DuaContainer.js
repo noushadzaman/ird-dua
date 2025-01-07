@@ -1,7 +1,15 @@
 import { Fragment } from "react";
 import DuaCard from "./DuaCard";
+import MobileCatContainer from "./MobileCatContainer";
 
-const DuaContainer = ({ subcats, duas }) => {
+const DuaContainer = ({
+  subcats,
+  duas,
+  cats,
+  duasName,
+  querycat,
+  querySubcat,
+}) => {
   const groupedBySubcat = duas.reduce((acc, item) => {
     if (!acc[item.subcat_id]) {
       acc[item.subcat_id] = [];
@@ -14,6 +22,12 @@ const DuaContainer = ({ subcats, duas }) => {
     return dua[0].subcat_id;
   });
   const duaStructure = [];
+
+  const currentSubCat = subcats.find(
+    (subcat) => subcat.subcat_id == querySubcat
+  );
+  // console.log(currentSubCat);
+
   group.forEach((dua) => {
     duaStructure.push(
       subcats.find((subcat) => subcat.subcat_id == dua[0].subcat_id)
@@ -22,30 +36,39 @@ const DuaContainer = ({ subcats, duas }) => {
     duaStructure.push(dua);
   });
 
-  console.log(duaStructure);
+  console.log("ds", duaStructure);
 
   return (
-    <div className="flex flex-col gap-[10px] flex-1 h-[90vh] overflow-y-scroll ">
-      {duaStructure.map((item, number) => {
+    <div className="flex flex-col gap-[20px] lg:gap-[10px] flex-1 h-[90vh] overflow-y-scroll py-1 scroll-smooth">
+      <div id="dua-container-top"></div>
+      {/*  */}
+      <MobileCatContainer
+        cats={cats}
+        subcats={subcats}
+        duasName={duasName}
+        duas={duas}
+        querycat={querycat}
+        querySubcat={querySubcat}
+      />
+      {/*  */}
+      {duaStructure.map((item, i) => {
         return typeof item === "string" ? (
           <div
+            key={i}
             style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
             className="rounded-[10px] bg-white font-[500] text-[#393939]"
           >
-            <p
-              className="px-[30px] py-[15px] rounded-[10px]"
-              key={number}
-            >
+            <p className="px-[30px] py-[15px] rounded-[10px]">
               <span className="text-[#1FA45B] font-[600]">Section: </span>
               {item}
             </p>
           </div>
         ) : (
-          <Fragment key={number}>
+          <>
             {item.map((dua, i) => (
-              <DuaCard key={i} dua={dua} number={number} />
+              <DuaCard key={i} dua={dua} i={i} />
             ))}
-          </Fragment>
+          </>
         );
       })}
     </div>

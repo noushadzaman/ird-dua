@@ -48,4 +48,6 @@ export const findCatLogo = (icon) => {
   }
 };
 
-console.log(findCatLogo("zikirer_fozilot"));
+export const replaceSpaceWithUs = (inputString) => {
+  return `#${inputString.replace(/ /g, "_")}`;
+};

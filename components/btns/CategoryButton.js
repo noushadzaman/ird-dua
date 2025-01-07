@@ -2,17 +2,25 @@
 
 import { findCatLogo } from "@/utils";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const CategoryButton = ({ cat, subcats }) => {
-  return (
-    <Link
-      href={`/category/${cat.cat_id}/${
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(
+      `/category/${cat.cat_id}/${
         subcats.filter((subcat) => subcat.cat_id === cat.cat_id)[0].subcat_id
-      }`}
-    >
-      {" "}
-      <div className="hover:bg-[#E8F0F5] flex p-[10px] items-center gap-[16px] border-b border-[#F9F9F9] rounded-[10px]">
+      }`
+    );
+  };
+
+  return (
+    <a href={`#dua-container-top`}>
+      <div
+        onClick={handleClick}
+        className="hover:bg-[#E8F0F5] flex p-[10px] items-center gap-[16px] border-b border-[#F9F9F9] rounded-[10px]"
+      >
         <div className="size-[60px] bg-[#CFE0E5] flex items-center justify-center rounded-[10px]">
           <Image
             width={40}
@@ -38,7 +46,7 @@ const CategoryButton = ({ cat, subcats }) => {
           </p>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

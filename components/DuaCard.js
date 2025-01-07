@@ -2,9 +2,12 @@ import DuaLogo from "@/public/dua-logo.png";
 import Image from "next/image";
 import DuaCardBtns from "./DuaCardBtns";
 
-const DuaCard = ({ dua, number }) => {
+const DuaCard = ({ dua, i }) => {
+  console.log(dua);
+
   return (
-    <div
+    <section
+      id={`dua-card-${dua.id}`}
       style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
       className="px-[30px] py-[15px] rounded-[10px] bg-white space-y-[28px]"
     >
@@ -13,7 +16,7 @@ const DuaCard = ({ dua, number }) => {
       <div className="flex gap-[10px] items-center text-[#1FA45B] font-[600] leading-[25px]">
         <Image width={35} height={35} src={DuaLogo} alt="Logo" />
         <p>
-          {number}. {dua.dua_name_en}
+          {dua.id}. {dua.dua_name_en}
         </p>
       </div>
 
@@ -49,7 +52,7 @@ const DuaCard = ({ dua, number }) => {
       ) : null}
       {/*  */}
       <DuaCardBtns dua={dua} />
-    </div>
+    </section>
   );
 };
 
