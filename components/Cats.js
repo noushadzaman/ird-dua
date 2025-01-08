@@ -1,5 +1,6 @@
 import CategoryButton from "./btns/CategoryButton";
 import SubCats from "./SubCats";
+import SearchCategory from "./SearchCategory";
 
 const Cats = ({ cats, subcats, duasName, duas, querycat, querySubcat }) => {
   return (
@@ -10,10 +11,7 @@ const Cats = ({ cats, subcats, duasName, duas, querycat, querySubcat }) => {
       <h3 className="bg-[#1FA45B] text-center py-[18px] font-[600] text-[17px] text-white rounded-t-[10px]">
         Categories
       </h3>
-      <div className="px-[15px] pt-[15px]">
-        <input type="text" className="w-full" />
-      </div>
-
+      <SearchCategory querycat={querycat} querySubcat={querySubcat} />
       <div className="px-[15px] pt-[15px] pb-[15px] overflow-y-scroll h-[100vh] md:h-[70vh]">
         {cats.map((cat) => (
           <div key={cat.cat_id} className="">

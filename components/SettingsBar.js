@@ -12,9 +12,7 @@ const SettingsBar = () => {
   return (
     <div
       style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
-      className="bg-white rounded-[32px] pt-[35px] px-[20px] hidden 2xl:block w-[300px] 
-      xl:mr-[40px] max-h-[85vh]"
-      // max-2xl:hidden
+      className="bg-white rounded-[32px] pt-[35px] px-[20px] hidden 2xl:block w-[300px]  xl:mr-[24px] 2xl:mr-[40px]"
     >
       <h2 className="text-[#393939] text-[20px] font-[700] text-center pb-[25px]">
         Settings

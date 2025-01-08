@@ -31,7 +31,7 @@ const DuaContainer = ({
   });
 
   return (
-    <div className="flex flex-col gap-[20px] lg:gap-[10px] flex-1 h-[90vh] overflow-y-scroll py-1 scroll-smooth px-1">
+    <div className="flex flex-col gap-[20px] lg:gap-[10px] flex-1 h-[90vh] overflow-y-scroll py-1 scroll-smooth px-1 max-2xl:mr-1">
       <div id="dua-container-top"></div>
       {/*  */}
       <MobileCatContainer

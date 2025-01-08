@@ -2,6 +2,7 @@ import getDb from "@/sqlite";
 import "@/app/globals.css";
 import Sidebar from "@/components/Sidebar";
 import MainContainer from "@/components/MainContainer";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function Post({
   cats,
@@ -18,7 +19,7 @@ export default function Post({
   // console.log(duas);
 
   return (
-    <div className="flex gap-[33px] h-[100vh] overflow-y-hidden">
+    <div className="flex h-[100vh] overflow-y-hidden">
       {/* left sidebar*/}
       <Sidebar />
       {/* middle part */}
@@ -30,7 +31,7 @@ export default function Post({
         querycat={querycat}
         querySubcat={querySubcat}
       />
-      
+      <Toaster />
     </div>
   );
 }

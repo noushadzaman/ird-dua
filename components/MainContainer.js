@@ -3,6 +3,8 @@ import DuaContainer from "./DuaContainer";
 import { IoSearchOutline } from "react-icons/io5";
 import NavButtons from "./NavButtons";
 import SettingsBar from "./SettingsBar";
+import Image from "next/image";
+import { LOGO } from "@/utils";
 
 const MainContainer = ({
   cats,
@@ -15,9 +17,18 @@ const MainContainer = ({
   return (
     <div className="flex flex-col">
       <nav className="flex justify-between my-[28px]">
-        <h1 className="text-[24px] leading-[36px] font-[600] text-[#393939] max-xl:pl-4">
-          Dua Page
-        </h1>
+        <div className="flex items-center">
+          <Image
+            width={350}
+            height={350}
+            className="size-[80px] cursor-pointer xl:hidden"
+            src={LOGO}
+            alt="logo"
+          />
+          <h1 className="text-[24px] leading-[36px] font-[600] text-[#393939] max-xl:pl-1">
+            Dua Page
+          </h1>
+        </div>
         <div className="hidden md:flex items-center gap-[50px]">
           <div className="relative">
             <input
@@ -34,7 +45,7 @@ const MainContainer = ({
         </div>
       </nav>
 
-      <div className="flex gap-[30px]">
+      <div className="flex gap-[20px] 2xl:gap-[30px]">
         <Cats
           duas={duas}
           cats={cats}

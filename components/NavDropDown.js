@@ -1,5 +1,13 @@
 "use client";
 
+import * as React from "react";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+} from "@/components/ui/select";
 import { useState } from "react";
 import { FaSortDown } from "react-icons/fa";
 import { LuHandHelping } from "react-icons/lu";
@@ -53,28 +61,35 @@ const NavDropDown = () => {
 
   return (
     <div className="relative">
-      <FaSortDown
-        onClick={() => setIsOpen(!isOpen)}
-        className="text-gray-500 cursor-pointer shadow-xl"
-      />
-      {isOpen ? (
-        <div className="flex flex-col items-end absolute top-10 -left-[260px]">
-          <div className="bg-white size-[20px] rotate-45 mr-6"></div>
-          <div className="bg-white pt-10 pb-7 rounded-[14px] shadow-xl space-y-3 pr-20 pl-7 -mt-[10px]">
-            {menuItems.map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-3 items-center text-[18px] font-[400] text-[#1FA45B]"
-              >
-                {item.icon}
-                <p className="text-[14px] text-gray-600 text-nowrap">
-                  {item.text}
-                </p>
-              </div>
-            ))}
+      <Select>
+        <SelectTrigger>
+          <FaSortDown
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-gray-500 cursor-pointer shadow-xl"
+          />
+        </SelectTrigger>
+
+        <SelectContent>
+          <div className="flex flex-col items-end p-5">
+            <div className="bg-white size-[20px] rotate-45 mr-6"></div>
+            <div className="bg-white pt-10 pb-7 rounded-[14px] shadow-xl space-y-3 px-7 -mt-[10px]">
+              <SelectGroup>
+                {menuItems.map((item, i) => (
+                  <SelectItem key={i} value={item.link}>
+                    {" "}
+                    <div className="flex gap-3 items-center text-[18px] font-[400] text-[#1FA45B]">
+                      {item.icon}
+                      <p className="text-[14px] text-gray-600 text-nowrap">
+                        {item.text}
+                      </p>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </div>
           </div>
-        </div>
-      ) : null}
+        </SelectContent>
+      </Select>
     </div>
   );
 };

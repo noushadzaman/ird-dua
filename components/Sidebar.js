@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <ul
       style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
-      className="max-xl:absolute max-xl:bottom-0 flex xl:h-[92vh] justify-between max-xl:w-full xl:flex-col xl:gap-[27px] items-center bg-white max-xl:rounded-t-[45px] xl:rounded-[24px] py-[31px] px-[14px] xl:ml-[40px] xl:my-auto max-xl:shadow-3xl-up xl:shadow-0 shrink-0 z-50"
+      className="max-xl:absolute max-xl:bottom-0 flex xl:h-[92vh] justify-between max-xl:w-full xl:flex-col xl:gap-[27px] items-center bg-white max-xl:rounded-t-[45px] xl:rounded-[24px] py-[31px] px-[14px] xl:ml-[24px] 2xl:ml-[40px] xl:my-auto max-xl:shadow-3xl-up xl:shadow-0 shrink-0 z-50 max-xl:px-10 xl:mr-[20px] 2xl:mr-[30px]"
     >
       <Image
         width={350}
