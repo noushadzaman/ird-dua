@@ -1,10 +1,10 @@
-import Cats from "./Cats";
 import DuaContainer from "./DuaContainer";
 import { IoSearchOutline } from "react-icons/io5";
 import NavButtons from "./NavButtons";
 import SettingsBar from "./SettingsBar";
 import Image from "next/image";
 import { LOGO } from "@/utils";
+import CatsContainer from "./CatsContainer";
 
 const MainContainer = ({
   cats,
@@ -46,7 +46,7 @@ const MainContainer = ({
       </nav>
 
       <div className="flex gap-[20px] 2xl:gap-[30px]">
-        <Cats
+        <CatsContainer
           duas={duas}
           cats={cats}
           subcats={subcats}

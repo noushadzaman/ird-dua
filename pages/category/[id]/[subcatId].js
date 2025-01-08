@@ -4,7 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import MainContainer from "@/components/MainContainer";
 import { Toaster } from "@/components/ui/sonner";
 
-export default function Post({
+export default function Page({
   cats,
   subcats,
   duasName,

@@ -1,13 +1,21 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { IoSearchOutline } from "react-icons/io5";
 
 const SearchCategory = ({ querycat, querySubcat }) => {
+  const params = useSearchParams();
   const router = useRouter();
 
   const searchHandler = (string) => {
-    router.push(`/category/${querycat}/${querySubcat}?search-cat=${string}`);
+    const searchParams = new URLSearchParams(params);
+    if (string !== "") {
+      searchParams.set("search-cat", string);
+    } else {
+      searchParams.delete("search-cat");
+    }
+    const newUrl = `/category/${querycat}/${querySubcat}?${searchParams.toString()}`;
+    router.push(newUrl);
   };
 
   return (

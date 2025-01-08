@@ -49,7 +49,3 @@ export const findCatLogo = (icon) => {
       return PRAY_TIME;
   }
 };
-
-export const replaceSpaceWithUs = (inputString) => {
-  return `#${inputString.replace(/ /g, "_")}`;
-};
