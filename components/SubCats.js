@@ -2,7 +2,7 @@ import SubcatButton from "./btns/SubCategoryButton";
 import { PiArrowBendDownRight } from "react-icons/pi";
 
 const SubCats = ({ subcats, querycat, duas, querySubcat, duasName }) => {
-  console.log(duasName);
+// console.log(duas);
 
   return (
     <>

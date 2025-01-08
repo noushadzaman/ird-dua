@@ -3,7 +3,6 @@ import Image from "next/image";
 import DuaCardBtns from "./DuaCardBtns";
 
 const DuaCard = ({ dua, i }) => {
-  console.log(dua);
 
   return (
     <section

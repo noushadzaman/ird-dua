@@ -63,7 +63,9 @@ const MainContainer = ({
           querySubcat={querySubcat}
         />
         {/* right sidebar*/}
-        <SettingsBar />
+        <div className="hidden 2xl:block">
+          <SettingsBar />
+        </div>
       </div>
     </div>
   );
