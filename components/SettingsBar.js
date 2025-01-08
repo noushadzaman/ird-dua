@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Switch } from "@/components/ui/switch";
 
 const SettingsBar = () => {
   return (
@@ -27,8 +28,18 @@ const SettingsBar = () => {
               </div>
               <p>Language Settings</p>
             </AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            <AccordionContent
+              style={{
+                boxShadow: "0 0 0 0.5px #E2E2E2",
+              }}
+              className="py-[28px] px-[15px] flex items-center justify-center gap-3"
+            >
+              <button className="w-full py-[10px] border border-gray-300 rounded-md">
+                English
+              </button>
+              <button className="w-full py-[10px] border border-transparent rounded-md bg-[#1FA45B] text-white">
+                বাংলা
+              </button>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -38,7 +49,12 @@ const SettingsBar = () => {
               </div>
               <p>General Settings</p>
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent
+              style={{
+                boxShadow: "0 0 0 0.5px #E2E2E2",
+              }}
+              className="py-[28px] px-[15px]"
+            >
               Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>
           </AccordionItem>
@@ -49,7 +65,12 @@ const SettingsBar = () => {
               </div>
               <p>Appearance Settings</p>
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent
+              style={{
+                boxShadow: "0 0 0 0.5px #E2E2E2",
+              }}
+              className="py-[28px] px-[15px]"
+            >
               Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>
           </AccordionItem>
@@ -58,10 +79,16 @@ const SettingsBar = () => {
               <div className="size-[38px] bg-[#E8F0F5] flex items-center justify-center rounded-full">
                 <PiSquaresFour size={20} />
               </div>
-              <p>Language Settings</p>
+              <p>Appearance Settings</p>
             </AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            <AccordionContent
+              style={{
+                boxShadow: "0 0 0 0.5px #E2E2E2",
+              }}
+              className="flex items-center justify-between py-[28px] px-[15px]"
+            >
+              <p>Night Mode</p>
+              <Switch />
             </AccordionContent>
           </AccordionItem>
         </Accordion>

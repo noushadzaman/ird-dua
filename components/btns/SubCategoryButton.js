@@ -4,19 +4,16 @@ import { useRouter } from "next/router";
 
 const SubcatButton = ({ subcat, querycat, duas }) => {
   const router = useRouter();
-
-  // console.log("last duas", duas);
-  // console.log("last subcat", subcat);
-
+  
   const handleClick = () => {
     router.push(`/category/${querycat}/${subcat.id}`);
   };
 
   return (
     <a
-      // href={`#dua-card-${
-      //   duas.filter((dua) => dua.subcat_id === subcat.subcat_id)[0].dua_id
-      // }`}
+      href={`#dua-card-${
+        duas.filter((dua) => dua.subcat_id === subcat.subcat_id)[0].dua_id
+      }`}
     >
       <div className="py-[8px] relative cursor-pointer" onClick={handleClick}>
         <p className="pl-[19px]">{subcat.subcat_name_en}</p>
