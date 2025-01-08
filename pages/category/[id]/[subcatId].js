@@ -56,7 +56,6 @@ export async function getStaticProps({ params }) {
     props: {
       cats,
       subcats,
-      duasName,
       duas,
       querycat: params.id,
       querySubcat: params.subcatId,
