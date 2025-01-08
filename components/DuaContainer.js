@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import DuaCard from "./DuaCard";
 import MobileCatContainer from "./MobileCatContainer";
 
@@ -5,7 +6,6 @@ const DuaContainer = ({
   subcats,
   duas,
   cats,
-  duasName,
   querycat,
   querySubcat,
 }) => {
@@ -37,7 +37,6 @@ const DuaContainer = ({
       <MobileCatContainer
         cats={cats}
         subcats={subcats}
-        duasName={duasName}
         duas={duas}
         querycat={querycat}
         querySubcat={querySubcat}
@@ -56,11 +55,11 @@ const DuaContainer = ({
             </p>
           </div>
         ) : (
-          <>
+          <Fragment key={i}>
             {item.map((dua, i) => (
               <DuaCard key={i} dua={dua} i={i} />
             ))}
-          </>
+          </Fragment>
         );
       })}
     </div>

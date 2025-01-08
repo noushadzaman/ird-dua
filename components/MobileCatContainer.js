@@ -13,7 +13,6 @@ const MobileCatContainer = ({
   subcats,
   querycat,
   querySubcat,
-  duasName,
 }) => {
   return (
     <>
@@ -36,14 +35,12 @@ const MobileCatContainer = ({
               <div key={cat.cat_id} className="">
                 <CategoryButton cat={cat} subcats={subcats} />
                 {cat.cat_id == querycat ? (
-                  // <p className="pl-[19px]">{subcat.subcat_name_en}</p>
                   <SubCats
                     subcats={subcats.filter(
                       (subcat) => subcat.cat_id == querycat
                     )}
                     querycat={querycat}
                     querySubcat={querySubcat}
-                    duasName={duasName}
                     duas={duas}
                   />
                 ) : null}

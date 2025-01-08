@@ -6,16 +6,10 @@ import Image from "next/image";
 import { LOGO } from "@/utils";
 import CatsContainer from "./CatsContainer";
 
-const MainContainer = ({
-  cats,
-  subcats,
-  duasName,
-  duas,
-  querycat,
-  querySubcat,
-}) => {
+const MainContainer = ({ cats, subcats, duas, querycat, querySubcat }) => {
   return (
     <div className="flex flex-col">
+      {/* nav bar */}
       <nav className="flex justify-between my-[28px]">
         <div className="flex items-center">
           <Image
@@ -50,7 +44,6 @@ const MainContainer = ({
           duas={duas}
           cats={cats}
           subcats={subcats}
-          duasName={duasName}
           querycat={querycat}
           querySubcat={querySubcat}
         />
@@ -58,11 +51,10 @@ const MainContainer = ({
           cats={cats}
           subcats={subcats}
           duas={duas}
-          duasName={duasName}
           querycat={querycat}
           querySubcat={querySubcat}
         />
-        {/* right sidebar*/}
+        {/* right sidebar for desktop device*/}
         <div className="hidden 2xl:block">
           <SettingsBar />
         </div>

@@ -4,20 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import MainContainer from "@/components/MainContainer";
 import { Toaster } from "@/components/ui/sonner";
 
-export default function Page({
-  cats,
-  subcats,
-  duasName,
-  duas,
-  querycat,
-  querySubcat,
-}) {
-  // console.log("Category ID:", querycat);
-  // console.log("Subcategory ID:", querySubcat);
-  // console.log("subcats", subcats);
-  // console.log(cats, subcats, duasName);
-  // console.log(duas);
-
+export default function Page({ cats, subcats, duas, querycat, querySubcat }) {
   return (
     <div className="flex h-[100vh] overflow-y-hidden">
       {/* left sidebar*/}
@@ -26,11 +13,11 @@ export default function Page({
       <MainContainer
         cats={cats}
         subcats={subcats}
-        duasName={duasName}
         duas={duas}
         querycat={querycat}
         querySubcat={querySubcat}
       />
+      {/* for toasts */}
       <Toaster />
     </div>
   );
@@ -63,9 +50,6 @@ export async function getStaticProps({ params }) {
   const db = await getDb();
   const cats = await db.all("SELECT * FROM category");
   const subcats = await db.all("SELECT * FROM sub_category");
-  const duasName = await db.all("SELECT * FROM dua WHERE subcat_id = ?", [
-    params.subcatId,
-  ]);
   const duas = await db.all("SELECT * FROM dua WHERE cat_id = ?", [params.id]);
 
   return {

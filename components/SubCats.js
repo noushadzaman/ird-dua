@@ -1,8 +1,8 @@
 import SubcatButton from "./btns/SubCategoryButton";
 import { PiArrowBendDownRight } from "react-icons/pi";
 
-const SubCats = ({ subcats, querycat, duas, querySubcat, duasName }) => {
-// console.log(duas);
+const SubCats = ({ subcats, querycat, duas, querySubcat }) => {
+  const subCatDuas = duas.filter((dua) => dua.subcat_id == querySubcat);
 
   return (
     <>
@@ -12,14 +12,13 @@ const SubCats = ({ subcats, querycat, duas, querySubcat, duasName }) => {
           className="block ml-[35px] border-dotted border-l-[2px] border-[#1FA45B] font-[500] leading-[25px]"
         >
           <SubcatButton
-            duasName={duasName}
             subcat={subcat}
             duas={duas}
             querycat={querycat}
           />
           {querySubcat == subcat.id ? (
             <div className="ml-[20px] space-y-4 py-3">
-              {duasName.map((duaName, i) => (
+              {subCatDuas.map((duaName, i) => (
                 <a
                   href={`#dua-card-${duaName.id}`}
                   key={i}

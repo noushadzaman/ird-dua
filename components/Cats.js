@@ -5,7 +5,7 @@ import CategoryButton from "./btns/CategoryButton";
 import SubCats from "./SubCats";
 import { useSearchParams } from "next/navigation";
 
-const Cats = ({ cats, subcats, duasName, duas, querycat, querySubcat }) => {
+const Cats = ({ cats, subcats, duas, querycat, querySubcat }) => {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(null);
   const [catsData, setCatsData] = useState(cats);
@@ -36,7 +36,6 @@ const Cats = ({ cats, subcats, duasName, duas, querycat, querySubcat }) => {
               subcats={subcats.filter((subcat) => subcat.cat_id == querycat)}
               querycat={querycat}
               querySubcat={querySubcat}
-              duasName={duasName}
               duas={duas}
             />
           ) : null}

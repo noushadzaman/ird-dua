@@ -4,7 +4,6 @@ import Cats from "./Cats";
 const CatsContainer = ({
   cats,
   subcats,
-  duasName,
   duas,
   querycat,
   querySubcat,
@@ -22,7 +21,6 @@ const CatsContainer = ({
         duas={duas}
         cats={cats}
         subcats={subcats}
-        duasName={duasName}
         querycat={querycat}
         querySubcat={querySubcat}
       />
