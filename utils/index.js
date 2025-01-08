@@ -17,8 +17,10 @@ import MENU from "@/public/sidebar/menu.png";
 import RUQYAH from "@/public/sidebar/ruqyah.png";
 import LOGO from "@/public/sidebar/logo.png";
 import LOGO2 from "@/public/sidebar/logo-2.png";
+import AVATAR_ICON from "@/public/avatar.svg";
 
-export { BOOK, BULB, CHAT, HOME, MARK, MENU, RUQYAH, LOGO, LOGO2 };
+export { BOOK, BULB, CHAT, HOME, MARK, MENU, RUQYAH, LOGO, LOGO2, AVATAR_ICON };
+
 
 export const findCatLogo = (icon) => {
   switch (icon) {

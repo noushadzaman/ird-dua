@@ -15,7 +15,10 @@ const Sidebar = () => {
   const links = [HOME, MENU, BULB, MARK, RUQYAH, CHAT, BOOK];
 
   return (
-    <ul className="max-xl:absolute max-xl:bottom-0 flex xl:h-[92vh] justify-between max-xl:w-full xl:flex-col xl:gap-[27px] items-center bg-white max-xl:rounded-t-[45px] xl:rounded-[24px] py-[31px] px-[14px] xl:ml-[40px] xl:my-auto max-xl:shadow-3xl-up xl:shadow-0 shrink-0 z-50">
+    <ul
+      style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
+      className="max-xl:absolute max-xl:bottom-0 flex xl:h-[92vh] justify-between max-xl:w-full xl:flex-col xl:gap-[27px] items-center bg-white max-xl:rounded-t-[45px] xl:rounded-[24px] py-[31px] px-[14px] xl:ml-[40px] xl:my-auto max-xl:shadow-3xl-up xl:shadow-0 shrink-0 z-50"
+    >
       <Image
         width={350}
         height={350}

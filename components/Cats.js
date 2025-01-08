@@ -4,7 +4,8 @@ import SubCats from "./SubCats";
 const Cats = ({ cats, subcats, duasName, duas, querycat, querySubcat }) => {
   return (
     <div
-      className={`w-[380px] xl:w-[400px] 2xl:w-[430px] rounded-[10px] bg-[white] max-h-[85vh] hidden lg:block`}
+      style={{ boxShadow: "0 0 0 0.5px #E2E2E2" }}
+      className={`w-[380px] 2xl:w-[400px] rounded-[10px] bg-[white] max-h-[85vh] hidden lg:block`}
     >
       <h3 className="bg-[#1FA45B] text-center py-[18px] font-[600] text-[17px] text-white rounded-t-[10px]">
         Categories

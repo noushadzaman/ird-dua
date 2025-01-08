@@ -30,7 +30,7 @@ export default function Post({
         querycat={querycat}
         querySubcat={querySubcat}
       />
-      {/* right sidebar*/}
+      
     </div>
   );
 }

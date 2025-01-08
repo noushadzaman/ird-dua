@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import DuaCard from "./DuaCard";
 import MobileCatContainer from "./MobileCatContainer";
 
@@ -23,11 +22,6 @@ const DuaContainer = ({
   });
   const duaStructure = [];
 
-  const currentSubCat = subcats.find(
-    (subcat) => subcat.subcat_id == querySubcat
-  );
-  // console.log(currentSubCat);
-
   group.forEach((dua) => {
     duaStructure.push(
       subcats.find((subcat) => subcat.subcat_id == dua[0].subcat_id)
@@ -36,10 +30,8 @@ const DuaContainer = ({
     duaStructure.push(dua);
   });
 
-  console.log("ds", duaStructure);
-
   return (
-    <div className="flex flex-col gap-[20px] lg:gap-[10px] flex-1 h-[90vh] overflow-y-scroll py-1 scroll-smooth">
+    <div className="flex flex-col gap-[20px] lg:gap-[10px] flex-1 h-[90vh] overflow-y-scroll py-1 scroll-smooth px-1">
       <div id="dua-container-top"></div>
       {/*  */}
       <MobileCatContainer
